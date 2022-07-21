@@ -19,7 +19,7 @@ require('dotenv').config();
 
 const app = express();
 
-app.set('port', 3005);
+app.set('port', process.env.PORT || 3005);
 
 const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.dr3tw5d.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
